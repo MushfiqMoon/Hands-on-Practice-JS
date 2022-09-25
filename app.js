@@ -1,41 +1,35 @@
-
-
 // Reverse String
 
-function reverstString() {
+const reverstString = () => {
 
-    var input = document.getElementById("inputTxt").value;
+    const input = document.getElementById('inputTxt').value;
 
     if (isNaN(input)) {
 
-        var output = "";
+        let output = "";
 
-        for (i = input.length - 1; i >= 0; i--) {
-
+        for (let i = input.length - 1; i >= 0; i--) {
             output += input[i]
-
         }
-
         document.getElementById("result").innerHTML = output;
-
     } else {
-        document.getElementById("result").innerHTML = '<span class="alert alert-danger mt-2">Please enter Word !!! </span>';
+        document.getElementById("result").innerHTML = `<span class="alert alert-danger mt-2">Please enter Word !!! </span>`;
     }
-
 }
 
 
 // Count Vowels
 
-function countVowel() {
-    var cvInput = document.getElementById("CV-input").value;
+const countVowel = () => {
+
+    const cvInput = document.getElementById("CV-input").value;
 
 
     if (isNaN(cvInput)) {
 
-        var vowelCount = "0";
+        let vowelCount = "0";
 
-        for (var i = 0; i < cvInput.length ; i++) {
+        for (let i = 0; i < cvInput.length; i++) {
 
             switch (cvInput[i]) {
                 case "a":
@@ -43,14 +37,14 @@ function countVowel() {
                 case "i":
                 case "o":
                 case "u":
-                vowelCount++    
+                    vowelCount++
                     break;
             }
         }
-        document.getElementById("result2").innerHTML = 'Number of Vowel in '+ cvInput + ' : ' +vowelCount;
+        document.getElementById("result2").innerHTML = `Number of Vowel in ${cvInput } : ${vowelCount}`;
 
     } else {
-        document.getElementById("result2").innerHTML = '<span class="alert alert-danger mt-2">Please enter Word !!! </span>';
+        document.getElementById("result2").innerHTML = `<span class="alert alert-danger mt-2">Please enter Word !!! </span>`;
     }
 
 
